@@ -5,6 +5,7 @@ import json
 
 from my_path_data import root_url
 from my_path_data import html_index_root
+from my_path_data import db_login
 
 
 app = Flask(__name__)
@@ -19,7 +20,7 @@ from database_setup import (Base,
                             Restaurant,
                             Review)
 
-engine = create_engine('postgresql://student:password@localhost/mydb')
+engine = create_engine(db_login)
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 

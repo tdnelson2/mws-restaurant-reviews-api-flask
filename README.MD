@@ -28,7 +28,7 @@ sudo -u postgres psql
 
 * Create the database:
 ```
-\i create_db.sql
+\i create_db.sql;
 \q
 ```
 
@@ -40,7 +40,7 @@ sudo python data_importer.py
 
 ### API Setup
 * In a Linux environment `cd` to `/var/www/html`.
-* Run `git clone https://github.com/tdnelson2/mws-restaurant-reviews-api-flask.git restaurant-reviews-api`
+* Run `sudo git clone https://github.com/tdnelson2/mws-restaurant-reviews-api-flask.git restaurant-reviews-api`
 * `sudo nano /etc/apache2/sites-available/default-ssl.conf` add the following inside `<VirtualHost _default_:443>`:
 ```
     WSGIDaemonProcess restaurant-reviews-api user=student group=student threads=5 python-home=/var/www/html/restaurant-reviews-api:/var/www/html/restaurant-reviews-api/env/lib/python2.7/site-packages

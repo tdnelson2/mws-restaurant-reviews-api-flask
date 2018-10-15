@@ -5,9 +5,10 @@ from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
+from my_path_data import db_login
 
 
-engine = create_engine('postgresql://student:password@localhost/mydb')
+engine = create_engine(db_login)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 

@@ -1,5 +1,5 @@
 
-DROP DATABASE IF EXISTS mydb;
+DROP DATABASE IF EXISTS restaurant_reviews;
 CREATE ROLE student WITH LOGIN PASSWORD 'password';
-CREATE DATABASE mydb;
-GRANT ALL PRIVILEGES on database mydb to student;
+CREATE DATABASE restaurant_reviews;
+GRANT ALL PRIVILEGES on database restaurant_reviews to student;
