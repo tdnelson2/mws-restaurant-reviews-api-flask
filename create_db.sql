@@ -1,0 +1,5 @@
+
+DROP DATABASE IF EXISTS mydb;
+CREATE ROLE student WITH LOGIN PASSWORD 'password';
+CREATE DATABASE mydb;
+GRANT ALL PRIVILEGES on database mydb to student;
